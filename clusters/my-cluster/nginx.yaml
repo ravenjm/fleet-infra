@@ -26,7 +26,10 @@ spec:
   values:
     replicaCount: 1
     service:
-      type: ClusterIP	
+      type: ClusterIP
+    cloneStaticSiteFromGit:
+      enabled: true
+      repository: https://github.com/ithinkihaveacat/hello-world-html
   interval: 1m
   releaseName: nginx-test
   targetNamespace: default
