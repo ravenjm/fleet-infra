@@ -12,11 +12,15 @@ spec:
         kind: HelmRepository
         name: bitnami
       version: 7.4.0
+  install:
+    disableWait: true
+  upgrade:
+    disableWait: true
 #  install:
 #    timeout: 5m
   values:
     replicaCount: 3
-  interval: 1h
+  interval: 5m
   releaseName: apache-test
   targetNamespace: default
 
