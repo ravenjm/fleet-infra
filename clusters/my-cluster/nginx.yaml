@@ -30,6 +30,7 @@ spec:
     cloneStaticSiteFromGit:
       enabled: true
       repository: https://github.com/ithinkihaveacat/hello-world-html
+      branch: master
   interval: 1m
   releaseName: nginx-test
   targetNamespace: default
