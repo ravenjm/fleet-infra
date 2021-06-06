@@ -25,7 +25,8 @@ spec:
 #    timeout: 5m
   values:
     replicaCount: 1
-    service.type: ClusterIP	
+    service:
+      type: ClusterIP	
   interval: 1m
   releaseName: nginx-test
   targetNamespace: default
