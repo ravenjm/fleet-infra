@@ -2,25 +2,25 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: apache
+  name: nginx
   namespace: flux-system
 spec:
   chart:
     spec:
-      chart: apache
+      chart: nginx
       sourceRef:
         kind: HelmRepository
         name: bitnami
-      version: 7.4.0
-  install:
-    disableWait: true
-  upgrade:
-    disableWait: true
+      version: 9.1.0
+#  install:
+#    disableWait: true
+#  upgrade:
+#    disableWait: true
 #  install:
 #    timeout: 5m
   values:
-    replicaCount: 3
+    replicaCount: 2
   interval: 5m
-  releaseName: apache-test
+  releaseName: nginx-test
   targetNamespace: default
 
