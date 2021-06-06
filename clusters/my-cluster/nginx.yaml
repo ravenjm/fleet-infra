@@ -12,7 +12,12 @@ spec:
         kind: HelmRepository
         name: bitnami
       version: 9.1.0
-#  install:
+  install:
+    remediation:
+      retries: 3
+  upgrade:
+    remediation:
+      retries: 3          
 #    disableWait: true
 #  upgrade:
 #    disableWait: true
